@@ -1,0 +1,159 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  margin: 0 auto;
+}
+
+
+.header {
+  height: 70px;
+  width: 100%;
+  background-color: rgb(103, 170, 224);
+  display: flex;
+  justify-content: space-between;
+  
+  .name {
+    width: 25%;
+    color: white;
+    font-size: 40px;
+    padding-left: 60px;
+    padding-top: 5px;
+  }
+
+  .box {
+    width: 25%;
+    margin-top: 45px;
+    display: flex;
+    justify-content: space-around;
+    
+    &__new {
+      border: solid 1px;
+      border-color: gray;
+      
+      .new {
+        text-decoration: none;
+        color: white;
+        
+      }
+    }
+  }
+}
+
+.main {
+  height: calc(100vh - 120px);
+  width: 100%;
+  display: flex;
+  .main-left {
+    width: 38%;
+    .count {
+      height: 240px;
+      width: 60%;
+      margin-top: 60px;
+      margin-left: 100px;
+      border: solid 3px;
+      border-color: lightgrey;
+      text-align: center;
+
+      &__date {
+        font-size: 20px;
+      }
+
+      &__up {
+        margin-top: 30px;
+        
+        display: flex;
+        justify-content: center;
+        &__num {
+          color: rgb(67, 178, 247);
+          font-size: 70px;
+        }
+        &__day{
+          margin-top: 60px;
+        }
+      }
+      &__ranking {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        .form {
+          height: 25px;
+          width: 180px;
+          background-color: mediumturquoise;
+          border-radius: 4px;
+          p {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+  .main-right {
+    width: 62%;
+    overflow: scroll;
+    
+
+    .post {
+      margin-top: 60px;
+      margin-left: 120px;
+      margin-right: 100px;
+      border: solid 1px;
+      border-color: lightskyblue;
+
+      &__text {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-around;
+
+        &__name {
+          margin-left: 20px;
+          color: rgb(74, 164, 248);
+          font-size: 20px;
+        }
+        &__date {
+          color: lightgray;
+          font-size: 15px;
+          font-family: fantasy;
+          margin-top: 9px;
+          margin-left: 120px;
+        }
+        &__btn {
+          border: solid 1px;
+          border-radius: 4px;
+          background-color: lightgray;
+          height: 20px;
+          width: 40px;
+          background-color: rgb(115, 189, 115);
+          text-align: center;
+          padding-bottom: 2px;
+          p {
+            color:white;
+          }
+        }
+      }
+      &__content {
+        margin-left: 30px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+
+    }
+  }
+}
+
+.footer {
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  background-color: rgb(224, 240, 247);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    color: gray;
+    font-size: 12px;
+    
+    
+  }
+}

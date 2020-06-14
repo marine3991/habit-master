@@ -1,0 +1,37 @@
+.wrapper
+  .header
+    .name 習慣化アプリ
+    .box
+      .box__nickname こんにちは マリン
+      .box__new
+        = link_to '/posts/new', class:"new" do
+          投稿
+    
+  .main
+    .main-left
+      .count
+        .count__date 継続日数
+        .count__up
+          .count__up__num 44
+          .count__up__day 日目
+        .count__ranking
+          .form
+            %p 継続日数ランキング
+    .main-right
+      - @posts.each do |post|
+        .post
+          .post__text
+            .post__text__name
+              = post.user.nickname
+            .post__text__date
+              = post.created_at
+            .post__text__btn
+              %p 完了
+          .post__content
+            = simple_format post.content
+          
+            
+          
+  .footer
+    %p -  2020 Habit Master  -
+    
